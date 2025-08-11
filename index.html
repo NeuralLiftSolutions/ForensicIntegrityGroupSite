@@ -4,188 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forensic Integrity Group</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #1c1c1c;
-      color: #f4f4f4;
-    }
-
-    header {
-      background-color: #2f3e2f;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 3px solid #4d5b4d;
-    }
-
-    header img {
-      height: 60px;
-    }
-
-    nav a {
-      color: #dcdcdc;
-      text-decoration: none;
-      margin-left: 1rem;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #a3bfa3;
-    }
-
-    .hero {
-      position: relative;
-      height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 1rem;
-      color: #e0e5e0;
-    }
-
-    /* Custom-colored camo texture */
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://www.transparenttextures.com/patterns/camouflage.png') repeat;
-      background-size: 300px;
-      filter: sepia(1) saturate(1.2) hue-rotate(35deg) brightness(0.6) contrast(1.2);
-      z-index: 0;
-    }
-
-    /* Dark overlay to make text readable */
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 0;
-    }
-
-    .hero img, .hero h2, .hero p, .hero a {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero img {
-      max-width: 220px;
-      margin-bottom: 1rem;
-    }
-
-    .hero h2 {
-      font-size: 2rem;
-      color: #d4d2b9; /* gold tone */
-      margin-top: 0.5rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin: 1rem 0 2rem;
-      max-width: 700px;
-    }
-
-    .hero a {
-      padding: 0.8rem 1.5rem;
-      background-color: #3f523f;
-      color: white;
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: bold;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-
-    .hero a:hover {
-      background-color: #5f735f;
-    }
-
-    .services {
-      padding: 3rem 1.5rem;
-      background-color: #2b332b;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .service-card {
-      background-color: #364236;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      transition: transform 0.2s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .service-card h3 {
-      margin-top: 0;
-      color: #b8c4b8;
-    }
-
-    footer {
-      background-color: #1a211a;
-      color: #9a9a9a;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header>
-    <img src="ForensicIntegrityGroupLogo.png" alt="Forensic Integrity Group Logo">
+  <!-- Header -->
+  <header class="header">
+    <img src="ForensicIntegrityGroupLogo.png" alt="Forensic Integrity Group Logo" class="logo">
     <nav>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
-    <img src="ForensicIntegrityGroupLogo.png" alt="Forensic Integrity Group Logo">
-    <h2>Military Precision, Legal Clarity, Forensic Integrity</h2>
-    <p>Specializing in private investigations, surveillance, background checks, and forensic analysis — delivering truth with integrity.</p>
-    <a href="#contact">Request a Consultation</a>
+    <div class="hero-content">
+      <img src="ForensicIntegrityGroupLogo.png" alt="Forensic Integrity Group" class="hero-logo">
+      <h1>Military Precision, Legal Clarity, Forensic Integrity</h1>
+      <p>Specialising in private investigations, surveillance, background checks, and forensic analysis — delivering each with integrity.</p>
+      <a href="#contact" class="cta-button">Request a Consultation</a>
+    </div>
   </section>
 
+  <!-- Services -->
   <section id="services" class="services">
-    <div class="service-card">
-      <h3>Private Investigations</h3>
-      <p>Discreet and thorough investigations tailored to your needs, with legally admissible results.</p>
-    </div>
-    <div class="service-card">
-      <h3>Surveillance Operations</h3>
-      <p>Advanced surveillance services to gather critical information without detection.</p>
-    </div>
-    <div class="service-card">
-      <h3>Background Checks</h3>
-      <p>Comprehensive background reporting for individuals, employees, or business partners.</p>
-    </div>
-    <div class="service-card">
-      <h3>Forensic Analysis</h3>
-      <p>Evidence examination and analysis performed by experienced professionals.</p>
+    <h2>Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Private Investigations</h3>
+        <p>Detailed and confidential investigation services for legal and personal matters.</p>
+      </div>
+      <div class="service-card">
+        <h3>Surveillance Operations</h3>
+        <p>Covert observation and evidence gathering with military-grade precision.</p>
+      </div>
+      <div class="service-card">
+        <h3>Background Checks</h3>
+        <p>Thorough checks to support hiring decisions and legal cases.</p>
+      </div>
+      <div class="service-card">
+        <h3>Forensic Analysis</h3>
+        <p>Technical analysis of evidence to support legal proceedings.</p>
+      </div>
     </div>
   </section>
 
-  <footer id="contact">
-    <p>Contact us: <a href="mailto:info@forensicintegrity.com" style="color:#a3bfa3;">info@forensicintegrity.com</a> | (555) 123-4567</p>
-    <p>&copy; 2025 Forensic Integrity Group. All Rights Reserved.</p>
-  </footer>
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@forensicintegritygroup.com</p>
+    <p>Phone: (555) 123-4567</p>
+  </section>
 
 </body>
 </html>
