@@ -21,12 +21,8 @@
       border-bottom: 3px solid #4d5b4d;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-      color: #c2c7c2;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+    header img {
+      height: 60px;
     }
 
     nav a {
@@ -42,8 +38,7 @@
     }
 
     .hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                  url('https://images.unsplash.com/photo-1504280390368-361c6d9f38f4') center/cover no-repeat;
+      background-color: #1f261f;
       height: 80vh;
       display: flex;
       flex-direction: column;
@@ -53,16 +48,22 @@
       padding: 0 1rem;
     }
 
+    .hero img {
+      max-width: 220px;
+      margin-bottom: 1rem;
+    }
+
     .hero h2 {
-      font-size: 2.5rem;
-      color: #e0e5e0;
-      text-shadow: 2px 2px 4px black;
+      font-size: 2rem;
+      color: #d4d2b9; /* logo gold tone */
+      margin-top: 0.5rem;
     }
 
     .hero p {
       font-size: 1.2rem;
       margin: 1rem 0 2rem;
       max-width: 700px;
+      color: #e0e5e0;
     }
 
     .hero a {
@@ -117,7 +118,7 @@
 <body>
 
   <header>
-    <h1>Forensic Integrity Group</h1>
+    <img src="57349475-0494-408b-a875-94c7c0607e9d.png" alt="Forensic Integrity Group Logo">
     <nav>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
@@ -125,7 +126,8 @@
   </header>
 
   <section class="hero">
-    <h2>Precision. Discretion. Results.</h2>
+    <img src="57349475-0494-408b-a875-94c7c0607e9d.png" alt="Forensic Integrity Group Logo">
+    <h2>Military Precision, Legal Clarity, Forensic Integrity</h2>
     <p>Specializing in private investigations, surveillance, background checks, and forensic analysis — delivering truth with integrity.</p>
     <a href="#contact">Request a Consultation</a>
   </section>
@@ -141,4 +143,18 @@
     </div>
     <div class="service-card">
       <h3>Background Checks</h3>
-      <p>Comprehensive background reporting for individuals, employees, or bus
+      <p>Comprehensive background reporting for individuals, employees, or business partners.</p>
+    </div>
+    <div class="service-card">
+      <h3>Forensic Analysis</h3>
+      <p>Evidence examination and analysis performed by experienced professionals.</p>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>Contact us: <a href="mailto:info@forensicintegrity.com" style="color:#a3bfa3;">info@forensicintegrity.com</a> | (555) 123-4567</p>
+    <p>&copy; 2025 Forensic Integrity Group. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
