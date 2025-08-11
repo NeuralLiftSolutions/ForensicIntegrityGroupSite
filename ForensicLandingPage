@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forensic Integrity Group</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1c1c1c;
+      color: #f4f4f4;
+    }
+
+    header {
+      background-color: #2f3e2f; /* deep camo green */
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #4d5b4d;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #c2c7c2;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #dcdcdc;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #a3bfa3;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                  url('https://images.unsplash.com/photo-1504280390368-361c6d9f38f4') center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #e0e5e0;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin: 1rem 0 2rem;
+      max-width: 700px;
+    }
+
+    .hero a {
+      padding: 0.8rem 1.5rem;
+      background-color: #3f523f;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero a:hover {
+      background-color: #5f735f;
+    }
+
+    .services {
+      padding: 3rem 1.5rem;
+      background-color: #2b332b;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background-color: #364236;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card h3 {
+      margin-top: 0;
+      color: #b8c4b8;
+    }
+
+    footer {
+      background-color: #1a211a;
+      color: #9a9a9a;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Forensic Integrity Group</h1>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Precision. Discretion. Results.</h2>
+    <p>Specializing in private investigations, surveillance, background checks, and forensic analysis — delivering truth with integrity.</p>
+    <a href="#contact">Request a Consultation</a>
+  </section>
+
+  <section id="services" class="services">
+    <div class="service-card">
+      <h3>Private Investigations</h3>
+      <p>Discreet and thorough investigations tailored to your needs, with legally admissible results.</p>
+    </div>
+    <div class="service-card">
+      <h3>Surveillance Operations</h3>
+      <p>Advanced surveillance services to gather critical information without detection.</p>
+    </div>
+    <div class="service-card">
+      <h3>Background Checks</h3>
+      <p>Comprehensive background reporting for individuals, employees, or bus
