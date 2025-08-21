@@ -169,3 +169,42 @@ html {
   text-align: center;
   background-color: #1a1f16;
 }
+
+/* Hamburger (hidden on large screens) */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #d2caa0;
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #1a1f16;
+    margin-top: 10px;
+    border-radius: 6px;
+  }
+
+  .nav a {
+    padding: 12px;
+    margin: 5px 0;
+    text-align: center;
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+}
