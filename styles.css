@@ -126,3 +126,7 @@ nav a {
   background-color: #2e7d32;  /* deep green */
   color: #fff;
 }
+
+html {
+  scroll-behavior: smooth;
+}
