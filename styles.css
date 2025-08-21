@@ -185,26 +185,30 @@ html {
   }
 
   .nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
+    display: none;               /* hidden by default */
+    flex-direction: column;      /* stack links vertically */
+    width: 100%;                 /* full width of screen */
     background-color: #1a1f16;
     margin-top: 10px;
     border-radius: 6px;
   }
 
   .nav a {
-    padding: 12px;
-    margin: 5px 0;
-    text-align: center;
-    display: block;
+    padding: 15px;
+    margin: 0;                   /* remove left margin */
+    text-align: center;          /* center text */
+    border-bottom: 1px solid #2a3226; /* subtle dividers */
   }
 
   .hamburger {
     display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: #d2caa0;
+    margin-left: auto;           /* push it to the right */
   }
 
   .nav.show {
-    display: flex;
+    display: flex;               /* only shown when toggled */
   }
 }
