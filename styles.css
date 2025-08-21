@@ -120,6 +120,49 @@ html {
   border-radius: 6px;
 }
 
+/* Meet Our Team */
+.team {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.team-member {
+  background-color: #2a3226;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-member img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  margin: 10px 0 5px;
+  color: #f4f1d0;
+}
+
+.team-member p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #d2caa0;
+}
+
 /* Contact */
 .contact {
   padding: 30px;
