@@ -120,3 +120,9 @@ nav a {
 .header nav a:active {
   background-color: #1b5e20; /* darker green when clicked */
 }
+
+/* Navigation Active State */
+.header nav a.active {
+  background-color: #2e7d32;  /* deep green */
+  color: #fff;
+}
