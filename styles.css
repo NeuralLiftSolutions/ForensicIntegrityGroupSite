@@ -178,16 +178,12 @@ html {
   color: #d2caa0;
 }
 
-/* Responsive Nav */
+/* Hide nav by default on small screens */
 @media (max-width: 768px) {
-  .header {
-    flex-wrap: wrap;
-  }
-
   .nav {
-    display: none;               /* hidden by default */
-    flex-direction: column;      /* stack links vertically */
-    width: 100%;                 /* full width of screen */
+    display: none;
+    flex-direction: column;
+    width: 100%;
     background-color: #1a1f16;
     margin-top: 10px;
     border-radius: 6px;
@@ -195,9 +191,9 @@ html {
 
   .nav a {
     padding: 15px;
-    margin: 0;                   /* remove left margin */
-    text-align: center;          /* center text */
-    border-bottom: 1px solid #2a3226; /* subtle dividers */
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid #2a3226;
   }
 
   .hamburger {
@@ -205,10 +201,22 @@ html {
     font-size: 28px;
     cursor: pointer;
     color: #d2caa0;
-    margin-left: auto;           /* push it to the right */
+    margin-left: auto;
   }
 
   .nav.show {
-    display: flex;               /* only shown when toggled */
+    display: flex;  /* reveal nav when .show is added */
+  }
+}
+
+/* On larger screens, always show nav and hide hamburger */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    gap: 20px;
   }
 }
