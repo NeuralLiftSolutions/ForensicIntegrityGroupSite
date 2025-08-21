@@ -185,8 +185,10 @@ html {
     flex-direction: column;
     width: 100%;
     background-color: #1a1f16;
-    margin-top: 10px;
-    border-radius: 6px;
+    position: absolute;
+    top: 60px;   /* sits just below header */
+    left: 0;
+    border-radius: 0 0 6px 6px;
   }
 
   .nav a {
@@ -202,21 +204,10 @@ html {
     cursor: pointer;
     color: #d2caa0;
     margin-left: auto;
+    z-index: 1100;
   }
 
   .nav.show {
-    display: flex;  /* reveal nav when .show is added */
-  }
-}
-
-/* On larger screens, always show nav and hide hamburger */
-@media (min-width: 769px) {
-  .hamburger {
-    display: none;
-  }
-
-  .nav {
     display: flex;
-    gap: 20px;
   }
 }
