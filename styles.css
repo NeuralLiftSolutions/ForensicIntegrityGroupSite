@@ -27,12 +27,12 @@ html {
 }
 
 /* Navigation */
-.header nav {
+.nav {
   display: flex;
   gap: 20px;
 }
 
-.header nav a {
+.nav a {
   color: #d2caa0;
   text-decoration: none;
   font-weight: 500;
@@ -42,21 +42,19 @@ html {
   transition: all 0.3s ease;
 }
 
-.header nav a:hover {
-  background-color: #2e7d32;  /* deep green */
+.nav a:hover {
+  background-color: #2e7d32; /* deep green */
   color: #fff;
 }
 
-.header nav a:active,
-.header nav a.active {
-  background-color: #1b5e20; /* darker green when clicked or active */
+.nav a.active {
+  background-color: #1b5e20; /* darker green */
   color: #fff;
 }
 
 /* Hero Section */
 .hero {
-  background: url('camo-bg.png') no-repeat center center;
-  background-size: cover;
+  background: url('camo-bg.png') no-repeat center center / cover;
   text-align: center;
   padding: 80px 20px;
 }
@@ -167,10 +165,9 @@ html {
 .contact {
   padding: 30px;
   text-align: center;
-  background-color: #1a1f16;
 }
 
-/* Hamburger (hidden on large screens) */
+/* Hamburger Menu */
 .hamburger {
   display: none;
   font-size: 28px;
@@ -178,7 +175,7 @@ html {
   color: #d2caa0;
 }
 
-/* Hide nav by default on small screens */
+/* Mobile Navigation */
 @media (max-width: 768px) {
   .nav {
     display: none;
@@ -186,7 +183,7 @@ html {
     width: 100%;
     background-color: #1a1f16;
     position: absolute;
-    top: 60px;   /* sits just below header */
+    top: 60px; /* sits just below header */
     left: 0;
     border-radius: 0 0 6px 6px;
   }
@@ -200,9 +197,6 @@ html {
 
   .hamburger {
     display: block;
-    font-size: 28px;
-    cursor: pointer;
-    color: #d2caa0;
     margin-left: auto;
     z-index: 1100;
   }
