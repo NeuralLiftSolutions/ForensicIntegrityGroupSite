@@ -10,20 +10,20 @@
 <body>
 
   <!-- Header -->
- <header class="header">
-  <img src="ForensicIntegrityGroupLogo.png" alt="Forensic Integrity Group Logo" class="logo">
+  <header class="header">
+    <img src="ForensicIntegrityGroupLogo.png" alt="Forensic Integrity Group Logo" class="logo">
 
-  <!-- Hamburger -->
-  <div class="hamburger">&#9776;</div>
+    <!-- Hamburger -->
+    <div class="hamburger">&#9776;</div>
 
-  <!-- Nav -->
-  <nav class="nav">
-    <a href="#about" class="nav-link">About Us</a>
-    <a href="#team" class="nav-link">Meet Our Team</a>
-    <a href="#services" class="nav-link">Services</a>
-    <a href="#contact" class="nav-link">Contact</a>
-  </nav>
-</header>
+    <!-- Nav -->
+    <nav class="nav">
+      <a href="#about" class="nav-link">About Us</a>
+      <a href="#team" class="nav-link">Meet Our Team</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -70,7 +70,7 @@
     </div>
   </section>
 
-<!-- Meet Our Team -->
+  <!-- Meet Our Team -->
   <section id="team" class="team">
     <h2>Meet Our Team</h2>
     <div class="team-grid">
@@ -90,70 +90,50 @@
   <!-- Contact -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
-   <p>Email: <a href="mailto:ForensicIntegrityGroup@Gmail.com">ForensicIntegrityGroup@Gmail.com</a></p>
-<p>Phone: <a href="tel:+14072745527">(407)-274-5527</a></p>
+    <p>Email: <a href="mailto:ForensicIntegrityGroup@Gmail.com">ForensicIntegrityGroup@Gmail.com</a></p>
+    <p>Phone: <a href="tel:+14072745527">(407)-274-5527</a></p>
   </section>
 
-<script>
-  // Highlight nav link when section is in view
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".nav-link");
+  <!-- Scripts -->
+  <script>
+    // Highlight nav link when section is in view
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
 
-  window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 80; // adjust for header height
-      const sectionHeight = section.clientHeight;
-      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        current = section.getAttribute("id");
-      }
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80; // adjust for header height
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    // Hamburger toggle + close on link click
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector(".nav");
+
+    hamburger.addEventListener("click", () => {
+      nav.classList.toggle("show");
+      hamburger.classList.toggle("active");
     });
 
     navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === "#" + current) {
-        link.classList.add("active");
-      }
+      link.addEventListener("click", () => {
+        nav.classList.remove("show");
+        hamburger.classList.remove("active");
+      });
     });
-  });
-</script>
-
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const nav = document.querySelector(".nav");
-
-  hamburger.addEventListener("click", () => {
-    nav.classList.toggle("show");
-  });
-</script>
-
-<script>
-  const hamburger = document.querySelector(".hamburger");
-  const nav = document.querySelector(".nav");
-
-  hamburger.addEventListener("click", () => {
-    nav.classList.toggle("show");
-  });
-</script>
-
-<script>
-  const hamburger = document.querySelector(".hamburger");
-  const nav = document.querySelector(".nav");
-  const navLinks = document.querySelectorAll(".nav a");
-
-  // Toggle menu
-  hamburger.addEventListener("click", () => {
-  nav.classList.toggle("show");
-  hamburger.classList.toggle("active");
-});
-
-  // Close menu when clicking a link
-  navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("show");
-    });
-  });
-</script>
+  </script>
   
 </body>
 </html>
