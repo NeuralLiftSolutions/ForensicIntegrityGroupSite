@@ -143,8 +143,9 @@
 
   // Toggle menu
   hamburger.addEventListener("click", () => {
-    nav.classList.toggle("show");
-  });
+  nav.classList.toggle("show");
+  hamburger.classList.toggle("active");
+});
 
   // Close menu when clicking a link
   navLinks.forEach(link => {
