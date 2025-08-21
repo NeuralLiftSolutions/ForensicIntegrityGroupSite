@@ -79,3 +79,44 @@ nav a {
   text-align: center;
   background-color: #1a1f16;
 }
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8); /* dark semi-transparent */
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  height: 50px;
+}
+
+/* Navigation */
+.header nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.header nav a:hover {
+  background-color: #2e7d32;  /* deep green */
+  color: #fff;
+}
+
+.header nav a:active {
+  background-color: #1b5e20; /* darker green when clicked */
+}
