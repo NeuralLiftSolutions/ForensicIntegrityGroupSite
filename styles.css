@@ -211,3 +211,7 @@ html {
     display: flex;
   }
 }
+
+.hamburger.active::before {
+  content: "✕"; /* Unicode X */
+}
