@@ -103,13 +103,6 @@ html {
    About Us
 ========================= */
 .about {
-  padding: 50px 20px;
-  max-width: 800px;
-  margin: auto;
-  text-align: center;
-}
-
-.about {
   padding: 60px 20px;
   max-width: 1100px;
   margin: auto;
@@ -127,14 +120,18 @@ html {
   margin-bottom: 25px;
 }
 
+/* Intro Card */
 .about-intro {
-  max-width: 800px;
-  margin: 0 auto 40px auto;
+  background-color: #2a3226;
+  padding: 35px;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 0 auto 50px auto;
   font-size: 1.05rem;
   line-height: 1.7;
 }
 
-/* Two-column content */
+/* Two-column layout */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -154,12 +151,14 @@ html {
   margin-bottom: 15px;
 }
 
-/* Highlight section */
+/* Highlight Box */
 .about-highlight {
-  background-color: #242b1f;
+  background-color: #2a3226;
   padding: 35px;
   border-radius: 10px;
   text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .about-highlight h3 {
@@ -170,19 +169,25 @@ html {
 .about-highlight ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .about-highlight li {
-  padding-left: 22px;
-  margin-bottom: 12px;
+  padding-left: 26px;
+  margin-bottom: 18px;
   position: relative;
   line-height: 1.6;
+}
+
+.about-highlight li:last-child {
+  margin-bottom: 0;
 }
 
 .about-highlight li::before {
   content: "✓";
   position: absolute;
   left: 0;
+  top: 0;
   color: #9fb28c;
   font-weight: bold;
 }
@@ -195,12 +200,14 @@ html {
 
   .about,
   .about-block,
-  .about-highlight {
+  .about-highlight,
+  .about-intro {
     text-align: center;
   }
 
   .about-block p,
-  .about-highlight li {
+  .about-highlight li,
+  .about-intro {
     text-align: left;
   }
 }
@@ -239,17 +246,15 @@ html {
   color: #f4f1d0;
 }
 
-/* Two-column desktop layout */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   max-width: 1100px;
   margin: 0 auto;
-  align-items: stretch; /* equal height cards */
+  align-items: stretch;
 }
 
-/* Founder card */
 .team-member {
   background-color: #2a3226;
   padding: 30px;
@@ -259,9 +264,7 @@ html {
   height: 100%;
 }
 
-/* Founder image */
 .team-member img {
-  display: block;
   width: 160px;
   height: 160px;
   object-fit: cover;
@@ -269,14 +272,12 @@ html {
   margin: 0 auto 20px auto;
 }
 
-/* Founder name */
 .team-member h3 {
   text-align: center;
   margin: 10px 0 5px;
   color: #f4f1d0;
 }
 
-/* Founder title */
 .team-title {
   text-align: center;
   font-size: 0.95rem;
@@ -285,7 +286,6 @@ html {
   margin-bottom: 25px;
 }
 
-/* Bio text */
 .team-member p {
   font-size: 0.95rem;
   line-height: 1.7;
@@ -293,7 +293,6 @@ html {
   margin-bottom: 15px;
 }
 
-/* Paragraph spacing */
 .team-member p + p {
   margin-top: 18px;
 }
@@ -371,7 +370,6 @@ html {
   }
 }
 
-/* Hamburger active (X) */
 .hamburger.active::before {
   content: "✕";
 }
